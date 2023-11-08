@@ -21,8 +21,14 @@ const HomeSectionCardCarousel = () => {
     },
   };
 
-  const slidePrev = () => setActiveIndex(activeIndex - 1);
-  const slideNext = () => setActiveIndex(activeIndex + 1);
+  const slidePrev = () => {
+    setActiveIndex(activeIndex - 1);
+    console.log(setActiveIndex);
+  };
+  const slideNext = () => {
+    setActiveIndex(activeIndex + 1);
+    console.log(setActiveIndex);
+  };
 
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
@@ -43,7 +49,7 @@ const HomeSectionCardCarousel = () => {
         {activeIndex !== items.length - 5 && (
           <Button
             variant="contained"
-            className="z-50"
+            className="z-50 bg-white"
             sx={{
               position: "absolute",
               top: "8rem",
@@ -59,6 +65,7 @@ const HomeSectionCardCarousel = () => {
             />
           </Button>
         )}
+
         {activeIndex !== 0 && (
           <Button
             variant="contained"
